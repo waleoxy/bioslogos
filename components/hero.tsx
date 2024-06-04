@@ -2,21 +2,21 @@ import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <div className="w-full h-screen bg-no-repeat bg-cover  object-cover bg-[url('/heroBgImg.jpg')]">
+    <div className="w-full min-h-screen h-[960px] bg-no-repeat bg-cover  object-cover bg-[url('/heroBgImg.jpg')] bg-fixed">
       <section className="h-full flex justify-start items-center">
-        <div className="text-white flex flex-col max-w-[600px] md:mx-[200px] mt-10">
+        <div className="text-white flex flex-col max-w-[600px] md:mx-[200px] mt-4">
           <h1 className="text-6xl leading-10 mb-10 font-semibold">
             Welcome to{" "}
             <span className="text-biosprimary tracking-tighter">
               BiosCheckpoint
             </span>
           </h1>{" "}
-          <h2 className="font-semibold text-2xl mb-8 text-bioslogo/100">
+          <h2 className="font-semibold text-2xl mb-8  bg-gradient-to-r from-sky-300 to-black bg-clip-text text-transparent ">
             Empowering Students, One Lesson at a Time
           </h2>
-          <p className="text-lg text-yellow-100/90 font-semibold">
+          <p className="text-xl font-semibold bg-gradient-to-r from-sky-300 to-blue-900 bg-clip-text text-transparent">
             At{" "}
-            <span className="text-bioslogo/75 tracking-tighter font-bold">
+            <span className="text-bioslogo tracking-tighter font-bold">
               BiosCkeckpoint
             </span>
             , we believe that learning should be fun, interactive, and tailored
