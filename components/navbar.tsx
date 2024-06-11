@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
-    <nav className="fixed z-50 bg-white/25 backdrop-blur-lg w-full h-[72px] border-b border-biosprimary border-opacity-15">
+    <nav className="fixed top-0 left-0 z-50 bg-biosprimary backdrop-blur-3xl w-full h-[72px] border-b border-biosprimary border-opacity-15">
       <MaxWidthWrapper>
         <div className="h-full flex items-center">
           <div className="flex justify-between items-center w-full">
@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className="flex space-x-3 ">
               <Button
                 variant={"ghost"}
-                className="border-biosprimary border text-white hover:text-biosprimary"
+                className="border-bioslogo border text-white hover:text-biosprimary"
               >
                 Login
               </Button>

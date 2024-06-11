@@ -4,9 +4,9 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const Approach = () => {
   return (
-    <div className="">
+    <div className="bg-transparent">
       {" "}
-      <div className="-mt-40 bg-white/55 rounded-t-3xl pt-2 max-w-screen-2xl mx-auto">
+      <div className="-mt-28 bg-white/55 backdrop-blur-2xl rounded-t-3xl pt-2 max-w-screen-2xl mx-auto">
         <MaxWidthWrapper className="">
           <TextGenerateEffect
             words="Rewarding and effective learning, through:"

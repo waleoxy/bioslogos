@@ -41,7 +41,7 @@ export function ApproachCard() {
         </Card>
         <Card
           title=" Utilizing appropriate resources and materials based on individual learning preference. Leveraging various multimedia tools and technologies to enhance the learning experience."
-          heading="Study Materials"
+          heading="Study Resources"
           icon={<BookOpen className="text-white h-12 w-12" />}
           className="bg-bioslogo"
         >
@@ -56,16 +56,18 @@ export function ApproachCard() {
   );
 }
 
-const Card = ({
+export const Card = ({
   title,
   heading,
   icon,
   className,
+  txtClassName,
   children,
 }: {
   title: string;
   heading: string;
   className?: string;
+  txtClassName?: string;
   icon: React.ReactNode;
   children?: React.ReactNode;
 }) => {
@@ -91,14 +93,19 @@ const Card = ({
         )}
       </AnimatePresence>
 
-      <div className="relative z-20 h-full w-full">
+      <div className={cn("relative z-20 h-full w-full", txtClassName)}>
         <div className="text-center  group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto">
           <div className=" w-full text-wrap flex flex-col items-end">
             <span className="text-2xl font-medium text-black">{heading}</span>
             {icon}
           </div>
         </div>
-        <h2 className="dark:text-white text-xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
+        <h2
+          className={cn(
+            "dark:text-white text-xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200",
+            txtClassName
+          )}
+        >
           {title}
         </h2>
       </div>

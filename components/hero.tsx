@@ -1,10 +1,12 @@
+import Link from "next/link";
 import { Button } from "./ui/button";
+import MaxWidthWrapper from "./max-width-wrapper";
 
 const Hero = () => {
   return (
-    <div className="w-full min-h-screen h-[960px] bg-no-repeat bg-cover  object-cover bg-[url('/heroBgImg.jpg')] bg-fixed">
-      <section className="h-full flex justify-start items-center">
-        <div className="text-white flex flex-col max-w-[600px] md:mx-[200px] mt-4">
+    <div className="w-full min-h-screen h-[860px] bg-no-repeat bg-cover  object-cover bg-[url('/heroBgImg.jpg')] bg-fixed">
+      <MaxWidthWrapper className=" h-full flex items-center ">
+        <div className="text-white flex flex-col max-w-[600px]">
           <h1 className="text-6xl leading-10 mb-10 font-semibold">
             Welcome to{" "}
             <span className="text-biosprimary tracking-tighter">
@@ -29,12 +31,15 @@ const Hero = () => {
             <Button className="bg-sky-700 hover:bg-sky-200 hover:text-sky-700 py-4 px-8">
               Get Started
             </Button>
-            <Button className="bg-sky-700 hover:bg-sky-200 hover:text-sky-700 py-4 px-8">
-              Learn More
-            </Button>
+            <Link
+              href={"demo"}
+              className="bg-sky-700 hover:bg-sky-200 hover:text-sky-700 py-4 px-8"
+            >
+              See Demo
+            </Link>
           </div>
         </div>
-      </section>
+      </MaxWidthWrapper>
     </div>
   );
 };
